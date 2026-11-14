@@ -4,7 +4,10 @@
   "event_date": "2026-11-14",
   "preexisting_work": {
     "DeltaFold": "Preexisting product; production source, accounts and data are separate from this prototype",
-    "earlier_prototypes": ["GammaFold", "DeltaFold Evidence Copilot"],
+    "earlier_prototypes": [
+      "GammaFold",
+      "DeltaFold Evidence Copilot"
+    ],
     "earlier_authoring_model": "gemini-4-hydrogen",
     "disclosure": "Earlier prototypes are not relabelled as Carbon work; copying or naming does not reset generation dates"
   },
@@ -79,5 +82,18 @@
     "deployment": "unverified",
     "submission": "not established by this package",
     "organizer_delivery": "not established by this package"
+  },
+  "public_delivery_verification": {
+    "checked_at": "2026-11-14T13:04:47.949247+00:00",
+    "source": "https://github.com/adam-kaluza/GammaFold-Final",
+    "deployment": "https://adam-kaluza.github.io/GammaFold-Final/",
+    "signed_out_source": true,
+    "signed_out_recorded_import": true,
+    "signed_out_export": true,
+    "new_api_calls": 0,
+    "original_runtime_timestamp_preserved": true,
+    "initial_public_code_revision": "7e6ff565620ba4ff3e649175ee325bd5de31603c",
+    "submission": "not yet submitted",
+    "videos": "not yet published"
   }
 }

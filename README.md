@@ -46,6 +46,6 @@ For a local live demonstration, the server requires a separately authorized acco
 - Actual final runtime: HTTP 200, requested and returned model `gemini-4-carbon`, v3 review validated with no issues.
 - Recorded artifact: independently imported successfully; replay retains the original timestamp and does not claim new inference.
 
-Failure tests use simulated responses. They are distinct from the genuine recorded result. Rendered-browser checks, deployed permissions and video publication are separate verification steps and are not inferred from these tests.
+Failure tests use simulated responses. They are distinct from the genuine recorded result. Desktop and mobile rendering, campaign isolation, reset, citation inspection and exported replay metadata were checked. The public source and hosted recording were also verified signed out. Video publication and competition submission are separate results.
 
 See [architecture](ARCHITECTURE.md), [limitations and data boundaries](LIMITATIONS.md), [attribution](ATTRIBUTION.md), [sanitized provenance](provenance.json), and [source/build hashes](SOURCE_SHA256.json). The original Hydrogen prototypes and preexisting DeltaFold are disclosed separately from the Carbon-authored integration. No license for the project's original source is added by this preparation; dependency notices retain their own terms.
