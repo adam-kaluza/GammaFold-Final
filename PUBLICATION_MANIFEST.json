@@ -1,8 +1,8 @@
 {
-  "createdAt": "2026-11-14T13:04:47.993101+00:00",
+  "createdAt": "2026-11-14T13:20:12.465592+00:00",
   "algorithm": "SHA-256",
   "fileCount": 76,
-  "excludes": "PUBLICATION_MANIFEST.json itself",
+  "excludes": "PUBLICATION_MANIFEST.json itself and .git metadata",
   "files": [
     {
       "path": ".env.example",
@@ -141,8 +141,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3915,
-      "sha256": "b1ea3f3e881c59a39729ef0f50c62d3ea6c31e72bd492cd7aa22555570fac43b"
+      "bytes": 4223,
+      "sha256": "959862c47e2490d611c4810b93180de76314a0be356d983b6151e45c5e138b4d"
     },
     {
       "path": "server/app.ts",

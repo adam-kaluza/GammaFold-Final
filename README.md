@@ -8,9 +8,10 @@ An isolated hackathon prototype for inspecting the evidence behind an AI-written
 
 The `docs/` directory contains the built static demonstration for GitHub Pages. It loads a **recorded result from a real `gemini-4-carbon` call** completed on November 14, 2026 at **12:41:37.031 UTC / 04:41:37.031 PST**. Loading that recording does not make a new model request.
 
-- Intended repository: `adam-kaluza/GammaFold-Final` — availability and publication unverified in this source package.
-- Provisional deployment: <https://adam-kaluza.github.io/GammaFold-Final/> — unverified until separately published and checked.
-- No submission, award, event advancement or organizer delivery is claimed by this repository preparation.
+- Public repository: <https://github.com/adam-kaluza/GammaFold-Final> — verified accessible while signed out.
+- Working demonstration: <https://adam-kaluza.github.io/GammaFold-Final/> — recorded review, citation inspection and JSON export verified while signed out.
+- [Two-minute introduction and pitch](https://youtu.be/SoGFYoUQeNk) and [one-minute prototype walkthrough](https://youtu.be/TsCE2Sqa3og) are public, captioned recordings of real application behavior. Both use a genuine recorded model response and make no new live inference claim.
+- Competition submission, personal attendance, awards and advancement are separate from publication of this demo.
 
 ## Try the workflow
 
