@@ -1,0 +1,53 @@
+{
+    "purpose":  "Preserved third-party dependency notices; not a license grant for original GammaFold Final source",
+    "files":  [
+                  {
+                      "package":  "react",
+                      "version":  "19.3.1",
+                      "path":  "third-party-licenses/react-LICENSE",
+                      "sha256":  "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+                  },
+                  {
+                      "package":  "react-dom",
+                      "version":  "19.3.1",
+                      "path":  "third-party-licenses/react-dom-LICENSE",
+                      "sha256":  "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+                  },
+                  {
+                      "package":  "scheduler",
+                      "version":  "0.28.0",
+                      "path":  "third-party-licenses/scheduler-LICENSE",
+                      "sha256":  "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+                  },
+                  {
+                      "package":  "lucide-react",
+                      "version":  "0.546.0",
+                      "path":  "third-party-licenses/lucide-react-LICENSE",
+                      "sha256":  "3c57143f22dac950efebf84002e360bba5458c7b90fe583b0667aaaef1a7256e"
+                  },
+                  {
+                      "package":  "tailwindcss",
+                      "version":  "4.3.5",
+                      "path":  "third-party-licenses/tailwindcss-LICENSE",
+                      "sha256":  "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+                  },
+                  {
+                      "package":  "vite",
+                      "version":  "8.3.8",
+                      "path":  "third-party-licenses/vite-LICENSE.md",
+                      "sha256":  "a22152baa1aef74402443008e767e7c689a524c0909d19b0431d97f5ab066a13"
+                  },
+                  {
+                      "package":  "@google/genai",
+                      "version":  "2.32.0",
+                      "path":  "third-party-licenses/google-genai-LICENSE",
+                      "sha256":  "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+                  },
+                  {
+                      "package":  "express",
+                      "version":  "4.22.3",
+                      "path":  "third-party-licenses/express-LICENSE",
+                      "sha256":  "95a5762890e5c1c9808921cef095661fc482c5e1f0bba31446ac85595df6237c"
+                  }
+              ]
+}

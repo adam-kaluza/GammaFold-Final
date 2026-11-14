@@ -1,0 +1,634 @@
+{
+  "exportSchemaVersion": "3.0.0",
+  "application": "GammaFold Final",
+  "executionMode": "live_server",
+  "exportedAt": "2026-11-14T12:41:37.117Z",
+  "prototypeDisclosure": "GammaFold Final — isolated hackathon software demonstration; not a production DeltaFold feature and not a biological design or laboratory execution tool.",
+  "deltaFoldRelationship": "DeltaFold is Adam Kaluza's preexisting protein research workbench. GammaFold Final is a separate, newly integrated hackathon prototype that shares no runtime state, user accounts, or source imports with production DeltaFold.",
+  "syntheticDataDisclosure": "100% synthetic teaching dataset (Round R01, C01–C06, units RFU). Contains no real protein sequences, no atomic coordinates, no wet-lab measurements, no clinical claims, and no validated efficacy or cost-savings claims.",
+  "validationDisclosure": "Structured record/field/status/qualifier/value/unit assertions are checked deterministically against frozen packet SYNTH-PKT-R01, and narrative prose is screened for uncited IDs, precision, integer/slot conflicts, and uncalibrated statistical claims. Narrative text remains model interpretation and requires human review.",
+  "provenanceSummary": {
+    "basePrototypesAuthoringModel": "gemini-4-hydrogen",
+    "finalIntegrationAuthoringModel": "gemini-4-carbon",
+    "finalIntegrationHarness": "Antigravity",
+    "runtimePolicy": "Local loopback gemini-4-carbon only in live mode; credential-free recorded replay in static mode; silent fallback disabled"
+  },
+  "campaign": {
+    "campaignId": "CAMP-SYNTH-R01",
+    "title": "Synthetic Solubility Screen — Round R01 (Active Demonstration)",
+    "stage": "Frozen Evidence Logged · Ready for Carbon Review",
+    "reviewerNotes": ""
+  },
+  "sourceIntegrity": {
+    "packetId": "SYNTH-PKT-R01",
+    "evidenceHash": "cdb881a51245d8065c2b22a14e6c9cc8ee21d2375f8e0c0c0be2ccc7a7494bff",
+    "recomputedEvidenceHash": "cdb881a51245d8065c2b22a14e6c9cc8ee21d2375f8e0c0c0be2ccc7a7494bff",
+    "immutableVerified": true
+  },
+  "sourcePacket": {
+    "packetId": "SYNTH-PKT-R01",
+    "roundId": "R01",
+    "title": "Fictional Protein-Solubility Assay Round R01",
+    "assayName": "Synthetic Solubility Fluorescence Screen (Teaching Dataset)",
+    "units": "RFU",
+    "synthetic": true,
+    "frozenBeforeOutcomes": true,
+    "replicates": 1,
+    "nextRoundBudgetSlots": 4,
+    "claimToCheck": "C03 achieved a measured score of 0.91 and all six candidates were successfully measured.",
+    "candidates": [
+      {
+        "id": "C01",
+        "label": "SYN-SOL-01",
+        "sampleId": "S01",
+        "observationId": "O01",
+        "predictionId": "P01",
+        "constructClass": "Synthetic variant alpha-1 (fictional)"
+      },
+      {
+        "id": "C02",
+        "label": "SYN-SOL-02",
+        "sampleId": "S02",
+        "observationId": "O02",
+        "predictionId": "P02",
+        "constructClass": "Synthetic variant alpha-2 (fictional)"
+      },
+      {
+        "id": "C03",
+        "label": "SYN-SOL-03",
+        "sampleId": "S03",
+        "observationId": "O03",
+        "predictionId": "P03",
+        "constructClass": "Synthetic variant beta-1 (fictional)"
+      },
+      {
+        "id": "C04",
+        "label": "SYN-SOL-04",
+        "sampleId": "S04",
+        "observationId": "O04",
+        "predictionId": "P04",
+        "constructClass": "Synthetic variant beta-2 (fictional)"
+      },
+      {
+        "id": "C05",
+        "label": "SYN-SOL-05",
+        "sampleId": "S05",
+        "observationId": "O05",
+        "predictionId": "P05",
+        "constructClass": "Synthetic variant gamma-1 (fictional)"
+      },
+      {
+        "id": "C06",
+        "label": "SYN-SOL-06",
+        "sampleId": "S06",
+        "observationId": "O06",
+        "predictionId": "P06",
+        "constructClass": "Synthetic variant gamma-2 (fictional)"
+      }
+    ],
+    "observations": [
+      {
+        "id": "O01",
+        "candidateId": "C01",
+        "sampleId": "S01",
+        "value": 0.72,
+        "qualifier": "=",
+        "upperBound": null,
+        "units": "RFU",
+        "status": "measured",
+        "reason": null
+      },
+      {
+        "id": "O02",
+        "candidateId": "C02",
+        "sampleId": "S02",
+        "value": 0,
+        "qualifier": "=",
+        "upperBound": null,
+        "units": "RFU",
+        "status": "measured",
+        "reason": null,
+        "note": "Zero (0.00 RFU) is a valid measured value, not missing data."
+      },
+      {
+        "id": "O03",
+        "candidateId": "C03",
+        "sampleId": "S03",
+        "value": null,
+        "qualifier": null,
+        "upperBound": null,
+        "units": "RFU",
+        "status": "failed",
+        "reason": "Instrument QC failure"
+      },
+      {
+        "id": "O04",
+        "candidateId": "C04",
+        "sampleId": "S04",
+        "value": null,
+        "qualifier": null,
+        "upperBound": null,
+        "units": "RFU",
+        "status": "missing",
+        "reason": "Not received"
+      },
+      {
+        "id": "O05",
+        "candidateId": "C05",
+        "sampleId": "S05",
+        "value": null,
+        "qualifier": "<",
+        "upperBound": 0.1,
+        "units": "RFU",
+        "status": "censored",
+        "reason": "Left-censored below upper bound (< 0.10 RFU); no point value"
+      },
+      {
+        "id": "O06",
+        "candidateId": "C06",
+        "sampleId": "S06",
+        "value": 0.65,
+        "qualifier": "=",
+        "upperBound": null,
+        "units": "RFU",
+        "status": "measured",
+        "reason": null
+      }
+    ],
+    "predictions": [
+      {
+        "id": "P01",
+        "candidateId": "C01",
+        "value": 0.68,
+        "units": "RFU",
+        "isSynthetic": true,
+        "isPriorPrediction": true,
+        "context": "Synthetic prior pre-outcome score for C01 (frozen before R01; not a measurement)"
+      },
+      {
+        "id": "P02",
+        "candidateId": "C02",
+        "value": 0.8,
+        "units": "RFU",
+        "isSynthetic": true,
+        "isPriorPrediction": true,
+        "context": "Synthetic prior pre-outcome score for C02 (frozen before R01; not a measurement)"
+      },
+      {
+        "id": "P03",
+        "candidateId": "C03",
+        "value": 0.91,
+        "units": "RFU",
+        "isSynthetic": true,
+        "isPriorPrediction": true,
+        "context": "Synthetic prior pre-outcome score for C03 (frozen before R01; not a measurement)"
+      },
+      {
+        "id": "P04",
+        "candidateId": "C04",
+        "value": 0.74,
+        "units": "RFU",
+        "isSynthetic": true,
+        "isPriorPrediction": true,
+        "context": "Synthetic prior pre-outcome score for C04 (frozen before R01; not a measurement)"
+      },
+      {
+        "id": "P05",
+        "candidateId": "C05",
+        "value": 0.25,
+        "units": "RFU",
+        "isSynthetic": true,
+        "isPriorPrediction": true,
+        "context": "Synthetic prior pre-outcome score for C05 (frozen before R01; not a measurement)"
+      },
+      {
+        "id": "P06",
+        "candidateId": "C06",
+        "value": 0.6,
+        "units": "RFU",
+        "isSynthetic": true,
+        "isPriorPrediction": true,
+        "context": "Synthetic prior pre-outcome score for C06 (frozen before R01; not a measurement)"
+      }
+    ]
+  },
+  "deterministicChecks": {
+    "totalCandidates": 6,
+    "measured": 3,
+    "failed": 1,
+    "missing": 1,
+    "censored": 1,
+    "nonMeasured": 3,
+    "validZeroCount": 1,
+    "replicates": 1,
+    "statisticalSignificanceSupported": false,
+    "statisticalNote": "Single synthetic pass (replicates = 1): p-values, confidence intervals, and statistical significance are unsupported.",
+    "budgetSlots": 4,
+    "comparisons": [
+      {
+        "candidateId": "C01",
+        "sampleId": "S01",
+        "observationId": "O01",
+        "predictionId": "P01",
+        "status": "measured",
+        "observedDisplay": "0.72 RFU",
+        "observedNumeric": 0.72,
+        "upperBound": null,
+        "predictionValue": 0.68,
+        "delta": 0.04,
+        "comparable": true,
+        "reason": null
+      },
+      {
+        "candidateId": "C02",
+        "sampleId": "S02",
+        "observationId": "O02",
+        "predictionId": "P02",
+        "status": "measured",
+        "observedDisplay": "0.00 RFU",
+        "observedNumeric": 0,
+        "upperBound": null,
+        "predictionValue": 0.8,
+        "delta": -0.8,
+        "comparable": true,
+        "reason": null
+      },
+      {
+        "candidateId": "C03",
+        "sampleId": "S03",
+        "observationId": "O03",
+        "predictionId": "P03",
+        "status": "failed",
+        "observedDisplay": "null (failed: Instrument QC failure)",
+        "observedNumeric": null,
+        "upperBound": null,
+        "predictionValue": 0.91,
+        "delta": null,
+        "comparable": false,
+        "reason": "Instrument QC failure"
+      },
+      {
+        "candidateId": "C04",
+        "sampleId": "S04",
+        "observationId": "O04",
+        "predictionId": "P04",
+        "status": "missing",
+        "observedDisplay": "null (missing: Not received)",
+        "observedNumeric": null,
+        "upperBound": null,
+        "predictionValue": 0.74,
+        "delta": null,
+        "comparable": false,
+        "reason": "Not received"
+      },
+      {
+        "candidateId": "C05",
+        "sampleId": "S05",
+        "observationId": "O05",
+        "predictionId": "P05",
+        "status": "censored",
+        "observedDisplay": "< 0.10 RFU (censored)",
+        "observedNumeric": null,
+        "upperBound": 0.1,
+        "predictionValue": 0.25,
+        "delta": null,
+        "comparable": false,
+        "reason": "Left-censored below upper bound (< 0.10 RFU); no point value"
+      },
+      {
+        "candidateId": "C06",
+        "sampleId": "S06",
+        "observationId": "O06",
+        "predictionId": "P06",
+        "status": "measured",
+        "observedDisplay": "0.65 RFU",
+        "observedNumeric": 0.65,
+        "upperBound": null,
+        "predictionValue": 0.6,
+        "delta": 0.05,
+        "comparable": true,
+        "reason": null
+      }
+    ]
+  },
+  "modelMetadata": {
+    "requestedModel": "gemini-4-carbon",
+    "returnedModelVersion": "gemini-4-carbon",
+    "returnedModelVersionReported": true,
+    "modelIdentityStatus": "verified_carbon",
+    "runtimeAccessProven": true,
+    "originalRecordedRuntimeAccessProven": true,
+    "statusNote": "Live gemini-4-carbon call completed (verified modelVersion \"gemini-4-carbon\").",
+    "timestamp": "2026-11-14T12:41:37.031Z",
+    "originalRuntimeTimestamp": "2026-11-14T12:41:37.031Z",
+    "recordedSourceExportedAt": null,
+    "responseStatus": "validated",
+    "isRecorded": false
+  },
+  "validation": {
+    "valid": true,
+    "status": "validated",
+    "issues": [],
+    "budgetUsed": 4,
+    "budgetLimit": 4,
+    "checks": {
+      "schemaValid": true,
+      "structuredAssertionsValid": true,
+      "allIdsValid": true,
+      "budgetValid": true,
+      "narrativeScreeningValid": true,
+      "auditRefutedValid": true,
+      "statisticalClaimGuardValid": true,
+      "modelIdentityValid": true
+    }
+  },
+  "modelOutput": {
+    "summary": "Synthetic round R01 evaluated 6 fictional candidates (replicates = 1) with 3 measured outcomes: C01 (O01 = 0.72 RFU), C02 (O02 = 0.00 RFU, valid measured zero), and C06 (O06 = 0.65 RFU). The remaining 3 candidates had unmeasured outcomes: C03 failed instrument QC (O03), C04 was missing/not received (O04), and C05 was left-censored (O05 < 0.10 RFU). Prior synthetic predictions (P01, P02, P03, P04, P05, P06) were frozen before R01 and remain strictly separate from observations. Up to 4 budget slots are available for next-round follow-up pending human review.",
+    "evidenceFindings": [
+      {
+        "assertions": [
+          {
+            "recordId": "O01",
+            "field": "value",
+            "status": "measured",
+            "qualifier": "=",
+            "value": 0.72,
+            "units": "RFU"
+          },
+          {
+            "recordId": "P01",
+            "field": "value",
+            "status": "prior_prediction",
+            "qualifier": "=",
+            "value": 0.68,
+            "units": "RFU"
+          }
+        ],
+        "claim": "Candidate C01 (sample S01) yielded a measured observation O01 of 0.72 RFU compared against its prior prediction P01 of 0.68 RFU.",
+        "sourceIds": [
+          "C01",
+          "S01",
+          "O01",
+          "P01"
+        ]
+      },
+      {
+        "assertions": [
+          {
+            "recordId": "O02",
+            "field": "value",
+            "status": "measured",
+            "qualifier": "=",
+            "value": 0,
+            "units": "RFU"
+          },
+          {
+            "recordId": "P02",
+            "field": "value",
+            "status": "prior_prediction",
+            "qualifier": "=",
+            "value": 0.8,
+            "units": "RFU"
+          }
+        ],
+        "claim": "Candidate C02 (sample S02) recorded a valid measured zero in O02 of 0.00 RFU (not missing data), whereas prior prediction P02 was 0.80 RFU.",
+        "sourceIds": [
+          "C02",
+          "S02",
+          "O02",
+          "P02"
+        ]
+      },
+      {
+        "assertions": [
+          {
+            "recordId": "O03",
+            "field": "value",
+            "status": "failed",
+            "qualifier": "none",
+            "value": null,
+            "units": "RFU"
+          },
+          {
+            "recordId": "P03",
+            "field": "value",
+            "status": "prior_prediction",
+            "qualifier": "=",
+            "value": 0.91,
+            "units": "RFU"
+          }
+        ],
+        "claim": "Candidate C03 (sample S03) had a failed observation O03 (null RFU due to Instrument QC failure); its prior prediction P03 of 0.91 RFU is not a measurement.",
+        "sourceIds": [
+          "C03",
+          "S03",
+          "O03",
+          "P03"
+        ]
+      },
+      {
+        "assertions": [
+          {
+            "recordId": "O04",
+            "field": "value",
+            "status": "missing",
+            "qualifier": "none",
+            "value": null,
+            "units": "RFU"
+          },
+          {
+            "recordId": "P04",
+            "field": "value",
+            "status": "prior_prediction",
+            "qualifier": "=",
+            "value": 0.74,
+            "units": "RFU"
+          }
+        ],
+        "claim": "Candidate C04 (sample S04) had a missing observation O04 (null RFU, sample not received); prior prediction P04 was 0.74 RFU.",
+        "sourceIds": [
+          "C04",
+          "S04",
+          "O04",
+          "P04"
+        ]
+      },
+      {
+        "assertions": [
+          {
+            "recordId": "O05",
+            "field": "upperBound",
+            "status": "censored",
+            "qualifier": "<",
+            "value": 0.1,
+            "units": "RFU"
+          },
+          {
+            "recordId": "P05",
+            "field": "value",
+            "status": "prior_prediction",
+            "qualifier": "=",
+            "value": 0.25,
+            "units": "RFU"
+          }
+        ],
+        "claim": "Candidate C05 (sample S05) produced a left-censored observation O05 (< 0.10 RFU upper bound with no point value), alongside prior prediction P05 of 0.25 RFU.",
+        "sourceIds": [
+          "C05",
+          "S05",
+          "O05",
+          "P05"
+        ]
+      },
+      {
+        "assertions": [
+          {
+            "recordId": "O06",
+            "field": "value",
+            "status": "measured",
+            "qualifier": "=",
+            "value": 0.65,
+            "units": "RFU"
+          },
+          {
+            "recordId": "P06",
+            "field": "value",
+            "status": "prior_prediction",
+            "qualifier": "=",
+            "value": 0.6,
+            "units": "RFU"
+          }
+        ],
+        "claim": "Candidate C06 (sample S06) yielded a measured observation O06 of 0.65 RFU compared against its prior prediction P06 of 0.60 RFU.",
+        "sourceIds": [
+          "C06",
+          "S06",
+          "O06",
+          "P06"
+        ]
+      }
+    ],
+    "limitations": [
+      {
+        "note": "Round R01 includes replicates = 1 per candidate across 6 synthetic constructs, precluding variance estimation or statistical inference.",
+        "sourceIds": [
+          "R01"
+        ]
+      },
+      {
+        "note": "Only 3 of 6 candidates in R01 produced measured point values because O03 failed QC, O04 was missing, and O05 was left-censored below 0.10 RFU.",
+        "sourceIds": [
+          "R01",
+          "O03",
+          "O04",
+          "O05"
+        ]
+      },
+      {
+        "note": "All records in R01 represent a synthetic solubility fluorescence teaching dataset and provide no evidence of biological activity or downstream properties.",
+        "sourceIds": [
+          "R01"
+        ]
+      }
+    ],
+    "proposedActions": [
+      {
+        "candidateId": "C03",
+        "purpose": "Allocate 1 assay slot to re-assay C03 (sample S03) after O03 failed instrument QC, given prior prediction P03 of 0.91 RFU; human review is required before execution.",
+        "assaySlots": 1,
+        "sourceIds": [
+          "R01",
+          "C03",
+          "S03",
+          "O03",
+          "P03"
+        ]
+      },
+      {
+        "candidateId": "C04",
+        "purpose": "Allocate 1 assay slot to obtain a first measurement for C04 (sample S04) after O04 was missing (not received), noting prior prediction P04 of 0.74 RFU; human review is required.",
+        "assaySlots": 1,
+        "sourceIds": [
+          "R01",
+          "C04",
+          "S04",
+          "O04",
+          "P04"
+        ]
+      },
+      {
+        "candidateId": "C01",
+        "purpose": "Allocate 1 assay slot for an independent repeat measurement of C01 to verify single-replicate observation O01 (0.72 RFU); human review is required.",
+        "assaySlots": 1,
+        "sourceIds": [
+          "R01",
+          "C01",
+          "O01"
+        ]
+      },
+      {
+        "candidateId": "C06",
+        "purpose": "Allocate 1 assay slot for an independent repeat measurement of C06 to verify single-replicate observation O06 (0.65 RFU); human review is required.",
+        "assaySlots": 1,
+        "sourceIds": [
+          "R01",
+          "C06",
+          "O06"
+        ]
+      }
+    ],
+    "unsupportedClaimAudit": {
+      "auditId": "AUDIT-CLAIM-01",
+      "claimToCheck": "C03 achieved a measured score of 0.91 and all six candidates were successfully measured.",
+      "verdict": "contradicted",
+      "assertions": [
+        {
+          "recordId": "O03",
+          "field": "value",
+          "status": "failed",
+          "qualifier": "none",
+          "value": null,
+          "units": "RFU"
+        },
+        {
+          "recordId": "P03",
+          "field": "value",
+          "status": "prior_prediction",
+          "qualifier": "=",
+          "value": 0.91,
+          "units": "RFU"
+        },
+        {
+          "recordId": "O04",
+          "field": "value",
+          "status": "missing",
+          "qualifier": "none",
+          "value": null,
+          "units": "RFU"
+        },
+        {
+          "recordId": "O05",
+          "field": "upperBound",
+          "status": "censored",
+          "qualifier": "<",
+          "value": 0.1,
+          "units": "RFU"
+        }
+      ],
+      "correction": "The claim is contradicted on both points in round R01. First, C03 did not achieve a measured score: observation O03 failed due to Instrument QC failure (value is null RFU), whereas 0.91 RFU is the frozen pre-outcome synthetic prior prediction P03, which cannot be substituted for a measurement. Second, only 3 of 6 candidates were measured (O01 = 0.72 RFU, O02 = 0.00 RFU, O06 = 0.65 RFU), while O03 failed QC, O04 was missing (not received), and O05 was left-censored (< 0.10 RFU with no point value).",
+      "sourceIds": [
+        "AUDIT-CLAIM-01",
+        "R01",
+        "C03",
+        "O01",
+        "O02",
+        "O03",
+        "O04",
+        "O05",
+        "O06",
+        "P03"
+      ]
+    }
+  },
+  "errorState": null
+}

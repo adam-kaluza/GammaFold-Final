@@ -1,0 +1,83 @@
+{
+  "application": "GammaFold Final",
+  "purpose": "Sanitized factual authoring and runtime evidence summary; excludes private session identifiers, accounts, project IDs and credentials",
+  "event_date": "2026-11-14",
+  "preexisting_work": {
+    "DeltaFold": "Preexisting product; production source, accounts and data are separate from this prototype",
+    "earlier_prototypes": ["GammaFold", "DeltaFold Evidence Copilot"],
+    "earlier_authoring_model": "gemini-4-hydrogen",
+    "disclosure": "Earlier prototypes are not relabelled as Carbon work; copying or naming does not reset generation dates"
+  },
+  "authoring": {
+    "provider": "Antigravity",
+    "runtime_version": "1.5.9",
+    "selected_model": "gemini-4-carbon",
+    "separate_executed_model_version": null,
+    "initial_integration": {
+      "started_at": "2026-11-14T10:28:56.781Z",
+      "completed_at": "2026-11-14T11:06:27.722Z",
+      "terminal_status": "completed",
+      "basis": "Actual authoring-provider terminal readback retained privately"
+    },
+    "structured_grounding_corrections": {
+      "date": "2026-11-14",
+      "terminal_status": "completed",
+      "precise_generation_times_in_this_summary": null,
+      "basis": "Completed Carbon authoring result and reviewed resulting source; no exact timestamps invented"
+    },
+    "final_boundary_corrections": {
+      "started_at": "2026-11-14T12:18:16.342Z",
+      "completed_at": "2026-11-14T12:48:03.293Z",
+      "terminal_status": "completed",
+      "selected_model": "gemini-4-carbon",
+      "separate_executed_model_version": null,
+      "basis": "Actual authoring-provider terminal readback retained privately"
+    },
+    "other_ai_assistance": "Requirements analysis, independent review/testing, source staging and non-code preparation are disclosed separately from Carbon-authored application code"
+  },
+  "runtime": {
+    "mode_at_capture": "local live server",
+    "http_status": 200,
+    "envelope_schema_version": "3.0.0",
+    "requested_model": "gemini-4-carbon",
+    "returned_model_version": "gemini-4-carbon",
+    "model_identity_status": "verified_carbon",
+    "original_runtime_timestamp": "2026-11-14T12:41:37.031Z",
+    "original_export_timestamp": "2026-11-14T12:41:37.117Z",
+    "response_status": "validated",
+    "validation_issues": [],
+    "defined_check_flags_passed": 8,
+    "proposed_slots_used": 4,
+    "proposed_slots_limit": 4,
+    "source_packet": "SYNTH-PKT-R01",
+    "source_packet_sha256": "cdb881a51245d8065c2b22a14e6c9cc8ee21d2375f8e0c0c0be2ccc7a7494bff",
+    "recording_path": "public/recorded/carbon-review-R01.json",
+    "recording_sha256": "b9e76479f3ba828225dea51a0ea9b2f790c5107f69a34729932be1afdbc5c051",
+    "qualification": "One genuine recorded success; no scientific validity or durable account-access guarantee"
+  },
+  "independent_recheck": {
+    "recorded_at": "2026-11-14T12:51:34Z",
+    "tests_passed": 28,
+    "tests_failed": 0,
+    "two_prior_boundary_findings": "resolved",
+    "recorded_import": "loaded and validated",
+    "recorded_review_matches_preserved_actual_response": true,
+    "new_model_call_during_import": false,
+    "replay_runtime_access_proven": false,
+    "original_recorded_runtime_access_proven": true,
+    "qualification": "Automated/local artifact checks; rendered and deployed access require separate verification"
+  },
+  "build_reported_results": {
+    "typecheck": "passed",
+    "live_build": "passed",
+    "static_build": "passed"
+  },
+  "public_delivery_status_at_staging": {
+    "provisional_repository": "adam-kaluza/GammaFold-Final",
+    "provisional_demo_url": "https://adam-kaluza.github.io/GammaFold-Final/",
+    "repository_availability": "unverified",
+    "deployment": "unverified",
+    "submission": "not established by this package",
+    "organizer_delivery": "not established by this package"
+  }
+}

@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Production build outputs
+dist/
+dist-static/
+dist-ssr/
+server.js
+
+# Secrets & local environment files (never commit API keys or credentials)
+.env
+.env.*
+!.env.example
+firebase-applet-config.json
+*.pem
+*.key
+
+# Logs & OS artifacts
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db

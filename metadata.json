@@ -1,0 +1,5 @@
+{
+  "name": "GammaFold Final",
+  "description": "Isolated hackathon evidence-review workbench combining synthetic campaign organization, frozen SHA-256 assay provenance, deterministic source/budget validation, and server-side gemini-4-carbon review.",
+  "requestFramePermissions": []
+}
