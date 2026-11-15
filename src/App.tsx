@@ -23,7 +23,6 @@ import {
   settleCampaignError,
 } from './domain/campaignSession.ts';
 import {
-  DEFAULT_CAMPAIGN_ID,
   getCampaignById,
   SYNTHETIC_CAMPAIGNS,
 } from './domain/campaigns.ts';
@@ -36,6 +35,7 @@ import {
   verifyFrozenPacketIntegrity,
 } from './domain/packet.ts';
 import { loadRecordedReviewFromUrl } from './domain/recordedReview.ts';
+import { clearPersistedLocalState, loadPersistedLocalState, savePersistedLocalState, type PersistedLocalState } from './domain/localState.ts';
 import type {
   ModelErrorResponse,
   ModelReviewEnvelope,
@@ -44,31 +44,6 @@ import type {
 } from './domain/types.ts';
 
 const IS_STATIC_MODE = import.meta.env.MODE === 'static';
-const LOCAL_STORAGE_KEY = 'gammafold_final_local_state_v1';
-
-interface PersistedLocalState {
-  campaignId: SyntheticCampaignId;
-  reviewerNotes: string;
-}
-
-function loadPersistedLocalState(): PersistedLocalState {
-  try {
-    const raw = window.localStorage.getItem(LOCAL_STORAGE_KEY);
-    if (!raw) {
-      return { campaignId: DEFAULT_CAMPAIGN_ID, reviewerNotes: '' };
-    }
-    const parsed = JSON.parse(raw) as Partial<PersistedLocalState>;
-    const validCamp = getCampaignById(parsed.campaignId);
-    return {
-      campaignId: validCamp ? validCamp.id : DEFAULT_CAMPAIGN_ID,
-      reviewerNotes:
-        typeof parsed.reviewerNotes === 'string' ? parsed.reviewerNotes.slice(0, 500) : '',
-    };
-  } catch {
-    return { campaignId: DEFAULT_CAMPAIGN_ID, reviewerNotes: '' };
-  }
-}
-
 function resolveCandidateIdFromSourceId(sourceId: string): string | null {
   if (sourceId === SYNTHETIC_EVIDENCE_PACKET.roundId) return null;
   if (sourceId === REQUIRED_AUDIT_CLAIM_ID) return 'C03';
@@ -88,7 +63,7 @@ export default function App() {
   const evidenceHash = useMemo(() => computeEvidenceHash(packet), [packet]);
   const immutableVerified = verifyFrozenPacketIntegrity(packet);
 
-  const initialLocal = useMemo(() => loadPersistedLocalState(), []);
+  const initialLocal = useMemo(() => loadPersistedLocalState(() => window.localStorage), []);
 
   const [activeView, setActiveView] = useState<AppView>('workbench');
   const [session, setSession] = useState<CampaignSessionState>(() =>
@@ -140,7 +115,7 @@ export default function App() {
         campaignId: selectedCampaignId,
         reviewerNotes,
       };
-      window.localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(payload));
+      savePersistedLocalState(window.localStorage, payload);
     } catch {
       // Non-fatal if storage is disabled in private browsing
     }
@@ -230,7 +205,7 @@ export default function App() {
     setExportGuardMessage(null);
     setActiveView('workbench');
     try {
-      window.localStorage.removeItem(LOCAL_STORAGE_KEY);
+      clearPersistedLocalState(window.localStorage);
     } catch {
       // Ignore storage error
     }
@@ -405,7 +380,7 @@ export default function App() {
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = `gammafold-final-review-${packet.roundId}.json`;
+      link.download = `gammafold-review-${packet.roundId}.json`;
       document.body.appendChild(link);
       link.click();
       link.remove();
@@ -555,7 +530,7 @@ export default function App() {
       <footer className="mt-8 border-t border-slate-200 bg-white">
         <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-2 px-4 py-4 text-xs text-slate-600 sm:px-6">
           <p>
-            <strong>GammaFold Final</strong> · Isolated hackathon prototype adjacent to preexisting
+            <strong>GammaFold</strong> · Isolated hackathon prototype adjacent to preexisting
             DeltaFold · 100% synthetic teaching dataset ({packet.packetId}) · No laboratory results
           </p>
           <p className="font-mono text-slate-500">

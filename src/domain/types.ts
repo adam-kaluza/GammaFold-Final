@@ -287,7 +287,7 @@ export type ExportExecutionMode =
 
 export interface ExportReviewPacket {
   exportSchemaVersion: typeof EXPORT_SCHEMA_VERSION;
-  application: 'GammaFold Final';
+  application: 'GammaFold';
   executionMode: ExportExecutionMode;
   exportedAt: string;
   prototypeDisclosure: string;

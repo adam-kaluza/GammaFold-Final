@@ -14,7 +14,7 @@ export function ProvenanceView({ evidenceHash }: ProvenanceViewProps) {
         </h1>
         <p className="mt-1 max-w-3xl text-sm text-slate-600">
           Transparent attribution of preexisting DeltaFold context, original Hydrogen-generated
-          hackathon prototypes, the Carbon-authored GammaFold Final workbench, and exact runtime
+          hackathon prototypes, the Carbon-authored GammaFold workbench, and exact runtime
           and static-replay boundaries.
         </p>
       </div>
@@ -29,7 +29,7 @@ export function ProvenanceView({ evidenceHash }: ProvenanceViewProps) {
             DeltaFold production remains unchanged and separate.
           </p>
           <p className="text-xs leading-relaxed text-slate-700">
-            <strong>GammaFold Final</strong> is an isolated software-only hackathon prototype created
+            <strong>GammaFold</strong> is an isolated software-only hackathon prototype created
             on November 14, 2026. It imports zero source modules from production DeltaFold, connects to
             no live DeltaFold servers, user accounts, Firebase stores, or scheduled jobs, and operates
             solely on local synthetic demonstration state with explicit reset and JSON export.
@@ -43,15 +43,20 @@ export function ProvenanceView({ evidenceHash }: ProvenanceViewProps) {
           <ul className="list-disc space-y-1.5 pl-4 text-xs leading-relaxed text-slate-700">
             <li>
               <strong>Preexisting Hackathon Backups (Hydrogen-Generated):</strong> Original{' '}
-              <code>DeltaFold Evidence Copilot</code> and original <code>GammaFold</code> AI Studio
+              <code>DeltaFold Evidence Copilot</code> and the earlier <code>GammaFold</code> AI Studio
               exports on November 14, 2026 were generated with <code>gemini-4-hydrogen</code> and are
               preserved intact without relabeling.
             </li>
             <li>
-              <strong>GammaFold Final Master Integration (Carbon-Authored):</strong> This unified
+              <strong>Original GammaFold Integration (Carbon-Authored):</strong> This unified
               application and its post-audit <code>3.0.0</code> deterministic validation upgrades in{' '}
-              <code>hackathon/2026-11-14/gammafold-final</code> were authored using{' '}
+              <code>hackathon/2026-11-14/gammafold</code> were authored using{' '}
               <code>gemini-4-carbon</code> through the Antigravity harness.
+            </li>
+            <li>
+              <strong>Current Name &amp; Maintenance:</strong> The integrated project was permanently
+              named GammaFold on November 15, 2026. Codex-assisted naming and compatibility updates
+              are separate from the original Carbon authoring. Original runtime recordings remain unchanged.
             </li>
             <li>
               <strong>Loopback-Only Live Runtime Policy:</strong> Local server mode binds strictly to

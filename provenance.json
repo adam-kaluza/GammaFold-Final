@@ -1,5 +1,5 @@
 {
-  "application": "GammaFold Final",
+  "application": "GammaFold",
   "purpose": "Sanitized factual authoring and runtime evidence summary; excludes private session identifiers, accounts, project IDs and credentials",
   "event_date": "2026-11-14",
   "preexisting_work": {
@@ -95,5 +95,13 @@
     "initial_public_code_revision": "7e6ff565620ba4ff3e649175ee325bd5de31603c",
     "submission": "not yet submitted",
     "videos": "not yet published"
+  },
+  "historical_publication_record": "history/2026-11-14/provenance.json",
+  "maintenance": {
+    "date": "2026-11-15",
+    "purpose": "Permanent product rename and backward-compatible persisted state and recorded exports",
+    "assistance": "Codex",
+    "original_runtime_recording_unchanged": true,
+    "legacy_public_urls_retained": true
   }
 }

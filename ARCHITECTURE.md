@@ -1,6 +1,6 @@
 # Architecture
 
-GammaFold Final provides one path from a synthetic campaign to an inspectable review and export.
+GammaFold provides one path from a synthetic campaign to an inspectable review and export.
 
 ```text
 Frozen source packet

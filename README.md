@@ -1,8 +1,10 @@
-# GammaFold Final
+# GammaFold
 
 An isolated hackathon prototype for inspecting the evidence behind an AI-written review. It combines a campaign workbench with source-linked Carbon interpretation, explicit uncertainty and exportable review packets.
 
 **Demonstration data is synthetic.** This is not a laboratory result, biological validation or a production DeltaFold feature.
+
+The permanent project name is **GammaFold**. Existing repository and demo URL paths are retained for link compatibility. See [rename and compatibility notes](RENAME.md).
 
 ## Demo status
 
@@ -42,7 +44,7 @@ For a local live demonstration, the server requires a separately authorized acco
 
 ## Verified software evidence
 
-- Independent automated suite: **28 passed, 0 failed**.
+- Original November 14 automated suite: **28 passed, 0 failed**. Current rename verification is recorded in [RENAME.md](RENAME.md).
 - Reported final typecheck and both production builds: passed.
 - Actual final runtime: HTTP 200, requested and returned model `gemini-4-carbon`, v3 review validated with no issues.
 - Recorded artifact: independently imported successfully; replay retains the original timestamp and does not claim new inference.

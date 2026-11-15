@@ -217,7 +217,7 @@ async function defaultGoogleGenAIGenerate(
     apiKey: args.apiKey,
     httpOptions: {
       headers: {
-        'User-Agent': 'gammafold-final-local-loopback',
+        'User-Agent': 'gammafold-local-loopback',
       },
     },
   });
@@ -304,7 +304,7 @@ export function createReviewService(deps: ReviewServiceDependencies = {}): Revie
         runtimeAccessProven: false,
         lastReturnedModelVersion: null,
         lastRuntimeCheckAt: runtimeReceipt?.checkedAt ?? null,
-        statusNote: `Server GEMINI_MODEL configuration violates policy. GammaFold Final strictly requires ${REQUIRED_CARBON_MODEL_ID} and disables silent fallback.`,
+        statusNote: `Server GEMINI_MODEL configuration violates policy. GammaFold strictly requires ${REQUIRED_CARBON_MODEL_ID} and disables silent fallback.`,
         evidenceHash,
         checkedAt: nowIso,
       };
@@ -435,7 +435,7 @@ export function createReviewService(deps: ReviewServiceDependencies = {}): Revie
         status: 503,
         body: {
           errorCode: 'INVALID_SERVER_MODEL_CONFIG',
-          message: `Server GEMINI_MODEL configuration violates policy. GammaFold Final strictly requires "${REQUIRED_CARBON_MODEL_ID}" and refuses fallback to Hydrogen or Flash.`,
+          message: `Server GEMINI_MODEL configuration violates policy. GammaFold strictly requires "${REQUIRED_CARBON_MODEL_ID}" and refuses fallback to Hydrogen or Flash.`,
           requestedModel: REQUIRED_CARBON_MODEL_ID,
           returnedModelVersion: null,
           runtimeAccessProven: false,
@@ -454,7 +454,7 @@ export function createReviewService(deps: ReviewServiceDependencies = {}): Revie
           status: 400,
           body: {
             errorCode: 'MODEL_POLICY_VIOLATION',
-            message: `Requested model override is disallowed. GammaFold Final strictly executes "${REQUIRED_CARBON_MODEL_ID}" with no fallback to Hydrogen or Flash.`,
+            message: `Requested model override is disallowed. GammaFold strictly executes "${REQUIRED_CARBON_MODEL_ID}" with no fallback to Hydrogen or Flash.`,
             requestedModel: REQUIRED_CARBON_MODEL_ID,
             returnedModelVersion: null,
             runtimeAccessProven: false,
@@ -788,7 +788,7 @@ export function createReviewService(deps: ReviewServiceDependencies = {}): Revie
           status: 429,
           body: {
             errorCode: 'QUOTA_EXCEEDED',
-            message: `${REQUIRED_CARBON_MODEL_ID} returned a quota or rate-limit refusal (HTTP 429). GammaFold Final never falls back silently to Hydrogen or Flash.`,
+            message: `${REQUIRED_CARBON_MODEL_ID} returned a quota or rate-limit refusal (HTTP 429). GammaFold never falls back silently to Hydrogen or Flash.`,
             requestedModel: REQUIRED_CARBON_MODEL_ID,
             returnedModelVersion: null,
             runtimeAccessProven: false,

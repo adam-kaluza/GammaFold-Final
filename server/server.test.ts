@@ -96,7 +96,7 @@ test('GET /api/packet returns frozen R01 packet, campaigns, and verified SHA-256
       sourceImmutableVerified: boolean;
       campaigns: Array<{ id: string }>;
     };
-    assert.equal(body.application, 'GammaFold Final');
+    assert.equal(body.application, 'GammaFold');
     assert.equal(body.evidenceHash, FROZEN_R01_EVIDENCE_HASH);
     assert.equal(body.sourceImmutableVerified, true);
     assert.equal(body.campaigns.length, 2);
@@ -942,7 +942,7 @@ test('built dist/ and dist-static/ bundles are credential-free, use relative pat
     if (!fs.existsSync(outDir)) continue;
 
     const indexHtml = fs.readFileSync(path.join(outDir, 'index.html'), 'utf8');
-    assert.match(indexHtml, /<title>GammaFold Final<\/title>/);
+    assert.match(indexHtml, /<title>GammaFold<\/title>/);
     assert.match(indexHtml, /\.\/assets\//, `${dirName}/index.html must use relative ./assets/ paths`);
     assert.doesNotMatch(
       indexHtml,

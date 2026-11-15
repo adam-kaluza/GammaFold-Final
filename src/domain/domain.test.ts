@@ -2,6 +2,9 @@
 // No live gemini-4-carbon provider calls are executed in this file.
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { clearPersistedLocalState, loadPersistedLocalState, savePersistedLocalState, LOCAL_STORAGE_KEY, LEGACY_LOCAL_STORAGE_KEY } from './localState.ts';
 import {
   beginCampaignRequest,
   createInitialCampaignSession,
@@ -888,4 +891,54 @@ test('natural Carbon prose patterns with 3.0.0 assertions pass validation withou
   const res = validateReviewOutput(naturalCarbonOutput, SYNTHETIC_EVIDENCE_PACKET);
   assert.equal(res.valid, true, `Unexpected issues: ${JSON.stringify(res.issues)}`);
   assert.equal(res.budgetUsed, 4);
+});
+
+
+test('permanent rename preserves the original recording and re-exports with the current name', () => {
+  const bytes = readFileSync(new URL('../../public/recorded/carbon-review-R01.json', import.meta.url));
+  assert.equal(createHash('sha256').update(bytes).digest('hex'), 'b9e76479f3ba828225dea51a0ea9b2f790c5107f69a34729932be1afdbc5c051');
+  const original = JSON.parse(bytes.toString('utf8'));
+  assert.equal(original.application, 'GammaFold Final');
+  const campaign = SYNTHETIC_CAMPAIGNS[0];
+  const imported = verifyAndImportRecordedReview(original, campaign, SYNTHETIC_EVIDENCE_PACKET);
+  assert.equal(imported.outcome, 'loaded');
+  if (imported.outcome !== 'loaded') throw new Error('Original recording did not load');
+  const current = buildExportReviewPacket({
+    packet: SYNTHETIC_EVIDENCE_PACKET, campaign, reviewerNotes: '', status: 'recorded',
+    modelStatus: null, envelope: imported.envelope, errorState: null,
+  });
+  assert.equal(current.application, 'GammaFold');
+  assert.equal(current.modelMetadata.originalRuntimeTimestamp, original.modelMetadata.originalRuntimeTimestamp);
+  assert.equal(current.modelMetadata.recordedSourceExportedAt, original.exportedAt);
+  assert.equal(current.modelMetadata.runtimeAccessProven, false);
+  assert.equal(verifyAndImportRecordedReview(current, campaign, SYNTHETIC_EVIDENCE_PACKET).outcome, 'loaded');
+  const unrelated = verifyAndImportRecordedReview({ ...current, application: 'Unrelated app' }, campaign, SYNTHETIC_EVIDENCE_PACKET);
+  assert.equal(unrelated.outcome, 'quarantined');
+  assert.ok(unrelated.envelope.validation.issues.some((issue) => issue.code === 'RECORDING_APPLICATION_MISMATCH'));
+});
+
+test('permanent rename migrates saved reviewer notes without resurrecting them after reset', () => {
+  const values = new Map<string, string>();
+  const storage = {
+    getItem: (key: string) => values.get(key) ?? null,
+    setItem: (key: string, value: string) => { values.set(key, value); },
+    removeItem: (key: string) => { values.delete(key); },
+  };
+  const previous = { campaignId: SYNTHETIC_CAMPAIGNS[1].id, reviewerNotes: 'Keep my local review notes' };
+  values.set(LEGACY_LOCAL_STORAGE_KEY, JSON.stringify(previous));
+  const loaded = loadPersistedLocalState(storage);
+  assert.deepEqual(loaded, previous);
+  savePersistedLocalState(storage, loaded);
+  assert.equal(values.has(LEGACY_LOCAL_STORAGE_KEY), false);
+  assert.deepEqual(loadPersistedLocalState(storage), previous);
+  values.set(LEGACY_LOCAL_STORAGE_KEY, JSON.stringify({ ...previous, reviewerNotes: 'stale' }));
+  assert.deepEqual(loadPersistedLocalState(storage), previous);
+  clearPersistedLocalState(storage);
+  assert.equal(values.has(LOCAL_STORAGE_KEY), false);
+  assert.equal(values.has(LEGACY_LOCAL_STORAGE_KEY), false);
+  assert.equal(loadPersistedLocalState(storage).reviewerNotes, '');
+  values.set(LEGACY_LOCAL_STORAGE_KEY, JSON.stringify(previous));
+  assert.throws(() => savePersistedLocalState({ ...storage, setItem: () => { throw new Error('Quota'); } }, previous));
+  assert.equal(values.has(LEGACY_LOCAL_STORAGE_KEY), true);
+  assert.equal(loadPersistedLocalState(() => { throw new Error('Storage disabled'); }).reviewerNotes, '');
 });

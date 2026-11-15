@@ -185,10 +185,11 @@ export function verifyAndImportRecordedReview(
   let candidateReviewOutput: unknown = null;
 
   if (isExportFormat) {
-    if (obj.application !== 'GammaFold Final') {
+    // Preserve genuine recordings made before the permanent product rename.
+    if (obj.application !== 'GammaFold' && obj.application !== 'GammaFold Final') {
       issues.push({
         code: 'RECORDING_APPLICATION_MISMATCH',
-        message: 'Recorded export application field must equal "GammaFold Final".',
+        message: 'Recorded export application must identify GammaFold or its legacy recorded name.',
       });
     }
     const campObj = obj.campaign as Record<string, unknown> | undefined;

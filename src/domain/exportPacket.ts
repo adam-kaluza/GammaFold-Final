@@ -127,13 +127,13 @@ export function buildExportReviewPacket(input: BuildExportPacketInput): ExportRe
 
   return {
     exportSchemaVersion: EXPORT_SCHEMA_VERSION,
-    application: 'GammaFold Final',
+    application: 'GammaFold',
     executionMode,
     exportedAt: input.exportedAt ?? new Date().toISOString(),
     prototypeDisclosure:
-      'GammaFold Final — isolated hackathon software demonstration; not a production DeltaFold feature and not a biological design or laboratory execution tool.',
+      'GammaFold — isolated hackathon software demonstration; not a production DeltaFold feature and not a biological design or laboratory execution tool.',
     deltaFoldRelationship:
-      'DeltaFold is Adam Kaluza\'s preexisting protein research workbench. GammaFold Final is a separate, newly integrated hackathon prototype that shares no runtime state, user accounts, or source imports with production DeltaFold.',
+      'DeltaFold is Adam Kaluza\'s preexisting protein research workbench. GammaFold is a separate, newly integrated hackathon prototype that shares no runtime state, user accounts, or source imports with production DeltaFold.',
     syntheticDataDisclosure:
       '100% synthetic teaching dataset (Round R01, C01–C06, units RFU). Contains no real protein sequences, no atomic coordinates, no wet-lab measurements, no clinical claims, and no validated efficacy or cost-savings claims.',
     validationDisclosure:

@@ -74,7 +74,7 @@ export function Navbar({
             </svg>
             <div className="min-w-0">
               <span className="font-display block text-base font-bold tracking-tight text-slate-900 sm:text-lg">
-                GammaFold Final
+                GammaFold
               </span>
               <span className="block text-[11px] font-medium text-slate-500">
                 Synthetic Assay Review Workbench · Adjacent to DeltaFold

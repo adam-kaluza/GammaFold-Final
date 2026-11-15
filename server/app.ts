@@ -93,7 +93,7 @@ export function createApiApp(options: CreateApiAppOptions = {}): express.Express
   app.get('/api/packet', (_req, res) => {
     const evidenceHash = computeEvidenceHash(SYNTHETIC_EVIDENCE_PACKET);
     res.json({
-      application: 'GammaFold Final',
+      application: 'GammaFold',
       campaigns: SYNTHETIC_CAMPAIGNS,
       packet: SYNTHETIC_EVIDENCE_PACKET,
       deterministicChecks: computeDeterministicSummary(SYNTHETIC_EVIDENCE_PACKET),

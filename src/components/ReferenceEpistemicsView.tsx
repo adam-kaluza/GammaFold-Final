@@ -42,7 +42,7 @@ const EPISTEMIC_CLASSES = [
     meaning:
       'Candidate follow-up suggestions (e.g., re-running failed QC O03 or locating missing sample S04).',
     allowedUse:
-      'Held behind an explicit human sign-off gate; GammaFold Final never executes laboratory protocols or mutates campaigns automatically.',
+      'Held behind an explicit human sign-off gate; GammaFold never executes laboratory protocols or mutates campaigns automatically.',
   },
 ];
 
@@ -58,7 +58,7 @@ export function ReferenceEpistemicsView() {
         </h1>
         <p className="mt-1 max-w-3xl text-sm text-slate-600">
           Scientific software fails when model prose, pre-outcome predictions, reference illustrations,
-          and recorded assay outcomes are blurred together. GammaFold Final enforces explicit separation
+          and recorded assay outcomes are blurred together. GammaFold enforces explicit separation
           across all five information classes.
         </p>
       </div>
@@ -78,7 +78,7 @@ export function ReferenceEpistemicsView() {
                 Epistemic Separation Matrix
               </h2>
               <p className="mt-0.5 text-xs text-slate-600">
-                Every value rendered or exported by GammaFold Final belongs to exactly one class below.
+                Every value rendered or exported by GammaFold belongs to exactly one class below.
               </p>
             </div>
 

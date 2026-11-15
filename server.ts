@@ -50,7 +50,7 @@ async function startServer() {
   const liveFlag = isLiveModeEnabled() ? 'enabled' : 'disabled (set GAMMAFOLD_LIVE_MODE=true to enable)';
   app.listen(SERVER_PORT, bindHost, () => {
     console.log(
-      `GammaFold Final local server listening on http://${bindHost}:${SERVER_PORT} (model: ${REQUIRED_CARBON_MODEL_ID}, liveMode: ${liveFlag})`,
+      `GammaFold local server listening on http://${bindHost}:${SERVER_PORT} (model: ${REQUIRED_CARBON_MODEL_ID}, liveMode: ${liveFlag})`,
     );
   });
 }

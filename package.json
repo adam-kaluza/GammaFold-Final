@@ -1,8 +1,8 @@
 {
-  "name": "gammafold-final",
+  "name": "gammafold",
   "private": true,
   "version": "1.0.0",
-  "description": "GammaFold Final — standalone synthetic assay evidence-review and constrained next-batch planning workbench using server-side gemini-4-carbon.",
+  "description": "GammaFold — standalone synthetic assay evidence-review and constrained next-batch planning workbench using server-side gemini-4-carbon.",
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",

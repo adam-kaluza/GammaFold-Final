@@ -43,7 +43,7 @@ export function CampaignsView({
           Synthetic Demonstration Campaigns
         </h1>
         <p className="mt-1 max-w-3xl text-sm text-slate-600">
-          GammaFold Final binds every review envelope and JSON export to its exact campaign ID,
+          GammaFold binds every review envelope and JSON export to its exact campaign ID,
           packet ID, and SHA-256 packet lock. Select{' '}
           <span className="font-mono font-semibold text-slate-900">CAMP-SYNTH-R01</span> to inspect
           the six frozen synthetic observations and evaluate a local loopback or static recorded{' '}
